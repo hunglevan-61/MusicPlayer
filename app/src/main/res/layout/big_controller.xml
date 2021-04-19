@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_activity_play"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_artist"
+        android:layout_width="@dimen/size300dp"
+        android:layout_height="@dimen/size300dp"
+        android:layout_marginTop="@dimen/size50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/big_westlife" />
+
+    <TextView
+        android:id="@+id/txtSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/profile_artist"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/size36dp"
+        android:textSize="@dimen/size24sp"
+        android:textColor="@color/song_color"
+        tools:text="I lay my love on you"
+        />
+
+    <TextView
+        android:id="@+id/txtArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtSong"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/size6dp"
+        android:textSize="@dimen/size18sp"
+        android:textColor="@color/white"
+        tools:text="Westlife"
+        />
+
+    <TextView
+        android:id="@+id/txtProgressDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="0:00"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/pgDuration"
+        app:layout_constraintBottom_toTopOf="@id/pgDuration"/>
+
+    <TextView
+        android:id="@+id/txtDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="3:40"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/pgDuration"
+        app:layout_constraintBottom_toTopOf="@id/pgDuration"/>
+
+    <SeekBar
+        android:id="@+id/pgDuration"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size6dp"
+        app:layout_constraintTop_toBottomOf="@id/txtArtist"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/size36dp"
+        android:layout_marginLeft="@dimen/size36dp"
+        android:layout_marginRight="@dimen/size36dp"
+        android:indeterminateTint="@color/background_progress"
+        android:progressTint="@color/progress"
+        tools:progress="50"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+    <ImageButton
+        android:id="@+id/btnPrevious"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_previous"
+        android:background="@color/background_activity_play"
+        app:layout_constraintTop_toBottomOf="@id/pgDuration"
+        app:layout_constraintStart_toStartOf="@id/pgDuration"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="@dimen/size30dp"
+        />
+
+    <ImageButton
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_next"
+        android:background="@color/background_activity_play"
+        app:layout_constraintTop_toBottomOf="@id/pgDuration"
+        app:layout_constraintEnd_toEndOf="@id/pgDuration"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="@dimen/size30dp"
+        />
+
+    <ImageButton
+        android:id="@+id/btnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/background_activity_play"
+        android:src="@drawable/ic_play"
+        app:layout_constraintTop_toBottomOf="@id/pgDuration"
+        app:layout_constraintEnd_toEndOf="@id/pgDuration"
+        app:layout_constraintStart_toStartOf="@id/pgDuration"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
